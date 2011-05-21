@@ -144,12 +144,8 @@ int main(int argc, char **argv) {
         }
         loginPanel->Reset();
 
-        char message[100];
         char* name = getenv("USER");
-        strcpy(message, "User: ");
-        strcat(message, name);
         loginPanel->SetName(name);
-        loginPanel->Message(message);
 
         // AuthenticateUser returns true if authenticated
         if (!AuthenticateUser())
